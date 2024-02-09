@@ -232,4 +232,6 @@ if [ -d "/usr/local/etc/ircddbgateway" ]; then
 	fi
 fi
 
+/usr/local/sbin/add-local-DMRid.sh -f
+
 exit 0
