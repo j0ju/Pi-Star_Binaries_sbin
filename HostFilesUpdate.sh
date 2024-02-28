@@ -17,6 +17,8 @@ if [ "$(expr length `hostname -I | cut -d' ' -f1`x)" == "1" ]; then
 	exit 0
 fi
 
+ping -c 3 -q 8.8.8.8 > /dev/null 2>&1 &
+
 # Get the Pi-Star Version
 pistarCurVersion=$(awk -F "= " '/Version/ {print $2}' /etc/pistar-release)
 
